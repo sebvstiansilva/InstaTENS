@@ -1,38 +1,68 @@
 package cl.sema.instatens.DTO;
 
+import java.util.List;
+
 public class Usuario {
-    private String rut;
-    private String name;
+    private String nombre;
+    private String apellidoPaterno;
+    private String appellidoMaterno;
     private String password;
     private String mail;
-    private int phone;
+    private int telefono;
+    private List<Direccion> direcciones;
+    private List<Familiar> familiares;
 
     public Usuario() {
 
     }
 
-    public Usuario(String rut, String name, String password, String mail, int phone) {
-        this.rut = rut;
-        this.name = name;
+    public Usuario(String nombre, String apellidoPaterno, String appellidoMaterno, String password, String mail, int telefono) {
+        this.nombre = nombre;
+        this.apellidoPaterno = apellidoPaterno;
+        this.appellidoMaterno = appellidoMaterno;
         this.password = password;
         this.mail = mail;
-        this.phone = phone;
+        this.telefono = telefono;
     }
 
-    public String getRut() {
-        return rut;
+    public List<Direccion> getDirecciones() {
+        return direcciones;
     }
 
-    public void setRut(String rut) {
-        this.rut = rut;
+    public void setDirecciones(List<Direccion> direcciones) {
+        this.direcciones = direcciones;
     }
 
-    public String getName() {
-        return name;
+    public List<Familiar> getFamiliares() {
+        return familiares;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFamiliares(List<Familiar> familiares) {
+        this.familiares = familiares;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellidoPaterno() {
+        return apellidoPaterno;
+    }
+
+    public void setApellidoPaterno(String apellidoPaterno) {
+        this.apellidoPaterno = apellidoPaterno;
+    }
+
+    public String getAppellidoMaterno() {
+        return appellidoMaterno;
+    }
+
+    public void setAppellidoMaterno(String appellidoMaterno) {
+        this.appellidoMaterno = appellidoMaterno;
     }
 
     public String getPassword() {
@@ -51,16 +81,16 @@ public class Usuario {
         this.mail = mail;
     }
 
-    public int getPhone() {
-        return phone;
+    public int getTelefono() {
+        return telefono;
     }
 
-    public void setPhone(int phone) {
-        this.phone = phone;
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
     }
 
     @Override
     public String toString() {
-        return "Usuario " + this.rut + " se ha registrado";
+        return "Usuario " + this.nombre + " se ha registrado";
     }
 }

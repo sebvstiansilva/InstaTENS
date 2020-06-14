@@ -13,7 +13,7 @@ import cl.sema.instatens.DTO.Usuario;
 public class RegisterActivity extends AppCompatActivity {
 
     Button register, cancel;
-    TextView rut, name, password, mail, phone;
+    TextView nombre, apellidoPaterno, apellidoMaterno, password, mail, telefono;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,17 +27,19 @@ public class RegisterActivity extends AppCompatActivity {
 
                 Usuario usuario = new Usuario();
 
-                rut = findViewById(R.id.rutTxt);
-                name = findViewById(R.id.nameTxt);
+                nombre = findViewById(R.id.nombreTxt);
+                apellidoPaterno = findViewById(R.id.apellidoPaternoTxt);
+                apellidoMaterno = findViewById(R.id.apellidoMaternoTxt);
                 password = findViewById(R.id.passwordTxt);
-                mail = findViewById(R.id.mailTxt);
-                phone = findViewById(R.id.phoneTxt);
+//                mail = findViewById(R.id.mailTxt);
+//                telefono = findViewById(R.id.telefonoTxt);
 
-                usuario.setRut(rut.getText().toString());
-                usuario.setName(name.getText().toString());
+                usuario.setNombre(nombre.getText().toString());
+                usuario.setApellidoPaterno(apellidoPaterno.getText().toString());
+                usuario.setAppellidoMaterno(apellidoMaterno.getText().toString());
                 usuario.setPassword(password.getText().toString());
                 usuario.setMail(mail.getText().toString());
-                usuario.setPhone(Integer.parseInt(phone.getText().toString()));
+                usuario.setTelefono(Integer.parseInt(telefono.getText().toString()));
 
                 new UsuarioDAO().addUsuario(usuario);
 
