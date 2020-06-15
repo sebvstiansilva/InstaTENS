@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sexo_array">
+        <item>Seleccione sexo...</item>
+        <item>Hombre</item>
+        <item>Mujer</item>
+    </string-array>
+
+    <string-array name="region_array">
+        <item>Seleccione región...</item>
+        <item>Valparaíso</item>
+    </string-array>
+
+    <string-array name="comuna_array">
+        <item>Seleccione comuna...</item>
+        <item>Valparaíso</item>
+        <item>Viña del Mar</item>
+    </string-array>
+</resources>

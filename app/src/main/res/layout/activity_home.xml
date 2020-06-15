@@ -39,11 +39,11 @@
         android:layout_marginStart="48dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="48dp"
-        android:background="@drawable/fieldtext_white"
+        android:background="@drawable/button_white"
         android:drawableLeft="@drawable/ic_user_plus_solid"
         android:drawablePadding="16dp"
         android:fontFamily="@font/regular"
-        android:paddingLeft="16dp"
+        android:padding="16dp"
         android:text="Agregar Familiar"
         android:textAlignment="textStart"
         android:textAllCaps="false"
@@ -71,7 +71,6 @@
         android:textColor="@color/colorDark"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/agregarFamiliarBtn" />
 
@@ -93,35 +92,22 @@
         android:textColor="@color/colorDark"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/agregarDireccionBtn" />
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/navbar"
-        android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:background="@drawable/bg_nav"
-        app:itemTextColor="@color/colorWhite"
-        app:itemBackground="@color/colorPrimary"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" >
-
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     <Button
         android:id="@+id/nuevaAtencionSBtn"
         android:layout_width="42dp"
         android:layout_height="42dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/button_white"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="36dp"
-        app:layout_constraintBottom_toBottomOf="@+id/navbar"
+        android:backgroundTint="@color/colorPrimary"
+        android:drawableStart="@drawable/ic_close"
+        android:padding="9dp"
+        android:drawableTint="@color/colorWhite"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/navbar" />
-
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

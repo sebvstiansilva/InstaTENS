@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,24 +9,19 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:fontFamily="@font/medium"
         android:text="@string/app_name"
         android:textColor="@color/colorWhite"
         android:textSize="36dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textAlignment="center" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingTop="192dp">
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -35,23 +30,22 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <TextView
+                    android:id="@+id/title_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:fontFamily="@font/regular"
+                    android:text="Registrarse"
+                    android:textColor="@color/colorDark"
+                    android:textSize="36dp" />
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/title_register"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="48dp"
-                        android:fontFamily="@font/regular"
-                        android:text="Registrarse"
-                        android:textColor="@color/colorDark"
-                        android:textSize="36dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/title_datos"
@@ -62,9 +56,7 @@
                         android:fontFamily="@font/light"
                         android:text="Datos Personales"
                         android:textColor="@color/colorGray"
-                        android:textSize="24dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/title_register" />
+                        android:textSize="24dp" />
 
                     <EditText
                         android:id="@+id/nombreTxt"
@@ -80,11 +72,7 @@
                         android:hint="Nombre"
                         android:paddingStart="24dp"
                         android:singleLine="true"
-                        android:textColor="@color/colorGray"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/title_datos" />
+                        android:textColor="@color/colorGray" />
 
                     <EditText
                         android:id="@+id/apellidoPaternoTxt"
@@ -100,11 +88,7 @@
                         android:hint="Apellido Paterno"
                         android:paddingStart="24dp"
                         android:singleLine="true"
-                        android:textColor="@color/colorGray"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/nombreTxt" />
+                        android:textColor="@color/colorGray" />
 
                     <EditText
                         android:id="@+id/apellidoMaternoTxt"
@@ -120,14 +104,10 @@
                         android:hint="Apellido Materno"
                         android:paddingStart="24dp"
                         android:singleLine="true"
-                        android:textColor="@color/colorGray"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/apellidoPaternoTxt" />
+                        android:textColor="@color/colorGray" />
 
                     <EditText
-                        android:id="@+id/passwordTxt"
+                        android:id="@+id/passwordRegister"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="48dp"
@@ -141,11 +121,7 @@
                         android:inputType="textPassword"
                         android:paddingStart="24dp"
                         android:singleLine="true"
-                        android:textColor="@color/colorGray"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/apellidoMaternoTxt" />
+                        android:textColor="@color/colorGray" />
 
                     <EditText
                         android:id="@+id/passwordRTxt"
@@ -162,11 +138,7 @@
                         android:inputType="textPassword"
                         android:paddingStart="24dp"
                         android:singleLine="true"
-                        android:textColor="@color/colorGray"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/passwordTxt" />
+                        android:textColor="@color/colorGray" />
 
                     <Spinner
                         android:id="@+id/sexo"
@@ -177,68 +149,59 @@
                         android:layout_marginEnd="48dp"
                         android:background="@drawable/fieldtext_white"
                         android:entries="@array/sexo_array"
-                        android:paddingLeft="42dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/passwordRTxt" />
+                        android:paddingLeft="42dp" />
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="48dp"
+                        android:orientation="horizontal">
 
-                    <EditText
-                        android:id="@+id/dia"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="48dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="48dp"
-                        android:background="@drawable/fieldtext_white"
-                        android:drawablePadding="8dp"
-                        android:hint="Dia"
-                        android:inputType="number"
-                        android:paddingStart="24dp"
-                        android:paddingEnd="24dp"
-                        android:singleLine="true"
-                        android:textColor="@color/colorGray"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/sexo" />
+                        <EditText
+                            android:id="@+id/dia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/fieldtext_white"
+                            android:drawablePadding="8dp"
+                            android:hint="Dia"
+                            android:inputType="number"
+                            android:paddingStart="24dp"
+                            android:paddingEnd="24dp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorGray" />
 
-                    <EditText
-                        android:id="@+id/mes"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="8dp"
-                        android:background="@drawable/fieldtext_white"
-                        android:drawablePadding="8dp"
-                        android:hint="Mes"
-                        android:inputType="number"
-                        android:paddingStart="24dp"
-                        android:paddingEnd="24dp"
-                        android:singleLine="true"
-                        android:textColor="@color/colorGray"
-                        app:layout_constraintStart_toEndOf="@+id/dia"
-                        app:layout_constraintTop_toBottomOf="@+id/sexo" />
+                        <EditText
+                            android:id="@+id/mes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/fieldtext_white"
+                            android:drawablePadding="8dp"
+                            android:hint="Mes"
+                            android:inputType="number"
+                            android:paddingStart="24dp"
+                            android:paddingEnd="24dp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorGray" />
 
-                    <EditText
-                        android:id="@+id/ano"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="48dp"
-                        android:background="@drawable/fieldtext_white"
-                        android:drawablePadding="8dp"
-                        android:hint="Año"
-                        android:inputType="number"
-                        android:paddingStart="48dp"
-                        android:paddingEnd="48dp"
-                        android:singleLine="true"
-                        android:textColor="@color/colorGray"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/mes"
-                        app:layout_constraintTop_toBottomOf="@+id/sexo" />
+                        <EditText
+                            android:id="@+id/ano"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/fieldtext_white"
+                            android:drawablePadding="8dp"
+                            android:hint="Año"
+                            android:inputType="number"
+                            android:paddingStart="48dp"
+                            android:paddingEnd="48dp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorGray" />
 
+                    </LinearLayout>
 
                     <TextView
                         android:id="@+id/title_contacto"
@@ -267,11 +230,125 @@
                         android:hint="Teléfono (9 dígitos)"
                         android:paddingStart="24dp"
                         android:singleLine="true"
-                        android:textColor="@color/colorGray"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/title_contacto" />
+                        android:textColor="@color/colorGray" />
+
+                    <EditText
+                        android:id="@+id/correoRegister"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="48dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="48dp"
+                        android:background="@drawable/fieldtext_white"
+                        android:drawableStart="@drawable/ic_user_solid"
+                        android:drawableLeft="@drawable/ic_user_solid"
+                        android:drawablePadding="8dp"
+                        android:hint="Correo electrónico"
+                        android:paddingStart="24dp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorGray" />
+
+                    <EditText
+                        android:id="@+id/correoRTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="48dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="48dp"
+                        android:background="@drawable/fieldtext_white"
+                        android:drawableStart="@drawable/ic_user_solid"
+                        android:drawableLeft="@drawable/ic_user_solid"
+                        android:drawablePadding="8dp"
+                        android:hint="Repita correo electrónico"
+                        android:paddingStart="24dp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorGray" />
+
+                    <Spinner
+                        android:id="@+id/regionTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="48dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="48dp"
+                        android:background="@drawable/fieldtext_white"
+                        android:drawableStart="@drawable/ic_user_solid"
+                        android:drawableLeft="@drawable/ic_user_solid"
+                        android:drawablePadding="8dp"
+                        android:hint=""
+                        android:paddingStart="24dp"
+                        android:singleLine="true"
+                        android:entries="@array/region_array"
+                        android:textColor="@color/colorGray" />
+
+                    <Spinner
+                        android:id="@+id/comunaTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="48dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="48dp"
+                        android:background="@drawable/fieldtext_white"
+                        android:drawableStart="@drawable/ic_user_solid"
+                        android:drawableLeft="@drawable/ic_user_solid"
+                        android:drawablePadding="8dp"
+                        android:hint=""
+                        android:paddingStart="24dp"
+                        android:singleLine="true"
+                        android:entries="@array/comuna_array"
+                        android:textColor="@color/colorGray" />
+
+                    <EditText
+                        android:id="@+id/calleTxt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="48dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="48dp"
+                        android:background="@drawable/fieldtext_white"
+                        android:drawableStart="@drawable/ic_user_solid"
+                        android:drawableLeft="@drawable/ic_user_solid"
+                        android:drawablePadding="8dp"
+                        android:hint="Calle"
+                        android:paddingStart="24dp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorGray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="48dp"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/numeroTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/fieldtext_white"
+                            android:drawablePadding="8dp"
+                            android:layout_marginTop="8dp"
+                            android:hint="Nº Casa"
+                            android:paddingStart="24dp"
+                            android:paddingEnd="24dp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorGray" />
+
+                        <EditText
+                            android:id="@+id/numeroDepTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@drawable/fieldtext_white"
+                            android:drawablePadding="8dp"
+                            android:hint="Dpto / Oficina"
+                            android:inputType="number"
+                            android:paddingStart="48dp"
+                            android:paddingEnd="48dp"
+                            android:singleLine="true"
+                            android:textColor="@color/colorGray" />
+
+                    </LinearLayout>
 
                     <Button
                         android:id="@+id/registerBtn"
@@ -282,11 +359,7 @@
                         android:layout_marginEnd="48dp"
                         android:background="@drawable/gradient_primary"
                         android:text="Registrar nueva cuenta"
-                        android:textColor="@color/colorWhite"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/telefonoTxt" />
+                        android:textColor="@color/colorWhite" />
 
                     <Button
                         android:id="@+id/cancelBtn"
@@ -297,15 +370,11 @@
                         android:layout_marginEnd="48dp"
                         android:background="@drawable/gradient_dark"
                         android:text="Cancelar"
-                        android:textColor="@color/colorWhite"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/registerBtn" />
+                        android:textColor="@color/colorWhite" />
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
             </LinearLayout>
         </ScrollView>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
     </RelativeLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

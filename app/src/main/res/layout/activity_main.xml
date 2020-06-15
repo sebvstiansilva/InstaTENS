@@ -72,7 +72,7 @@
         android:textColor="@color/colorWhite"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordTxt" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordLogin" />
 
 
 
@@ -90,7 +90,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <EditText
-        android:id="@+id/correoTxt"
+        android:id="@+id/correoLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
@@ -101,7 +101,7 @@
         android:drawableLeft="@drawable/ic_user_solid"
         android:drawablePadding="8dp"
         android:hint="Correo Electrónico"
-        android:inputType="number"
+        android:inputType="textEmailAddress"
         android:paddingStart="24dp"
         android:textColor="@color/colorGray"
         app:layout_constraintEnd_toEndOf="parent"
@@ -109,7 +109,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <EditText
-        android:id="@+id/passwordTxt"
+        android:id="@+id/passwordLogin"
         android:textColor="@color/colorGray"
         android:hint="Contraseña"
         android:drawableLeft="@drawable/ic_lock_solid"
@@ -125,6 +125,6 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/correoTxt" />
+        app:layout_constraintTop_toBottomOf="@+id/correoLogin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

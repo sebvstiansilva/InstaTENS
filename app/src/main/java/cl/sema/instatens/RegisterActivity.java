@@ -13,7 +13,7 @@ import cl.sema.instatens.DTO.Usuario;
 public class RegisterActivity extends AppCompatActivity {
 
     Button register, cancel;
-    TextView nombre, apellidoPaterno, apellidoMaterno, password, mail, telefono;
+    TextView nombre, apellidoPaterno, apellidoMaterno, password, correo, telefono;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,15 +30,15 @@ public class RegisterActivity extends AppCompatActivity {
                 nombre = findViewById(R.id.nombreTxt);
                 apellidoPaterno = findViewById(R.id.apellidoPaternoTxt);
                 apellidoMaterno = findViewById(R.id.apellidoMaternoTxt);
-                password = findViewById(R.id.passwordTxt);
-//                mail = findViewById(R.id.mailTxt);
-//                telefono = findViewById(R.id.telefonoTxt);
+                password = findViewById(R.id.passwordRegister);
+                correo = findViewById(R.id.correoRegister);
+                telefono = findViewById(R.id.telefonoTxt);
 
                 usuario.setNombre(nombre.getText().toString());
                 usuario.setApellidoPaterno(apellidoPaterno.getText().toString());
                 usuario.setAppellidoMaterno(apellidoMaterno.getText().toString());
                 usuario.setPassword(password.getText().toString());
-                usuario.setMail(mail.getText().toString());
+                usuario.setMail(correo.getText().toString());
                 usuario.setTelefono(Integer.parseInt(telefono.getText().toString()));
 
                 new UsuarioDAO().addUsuario(usuario);
