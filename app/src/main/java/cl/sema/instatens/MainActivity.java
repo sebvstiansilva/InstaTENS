@@ -10,7 +10,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import cl.sema.instatens.Connection.Connection;
+import com.google.common.hash.Hashing;
+
+import java.nio.charset.StandardCharsets;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+
+import cl.sema.instatens.Connection.ConnectionDB;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     TextView register;
     EditText correo, password;
 
-    private Connection connection = new Connection();
+    private ConnectionDB connection = new ConnectionDB();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,18 +35,23 @@ public class MainActivity extends AppCompatActivity {
         correo = findViewById(R.id.correoLogin);
         password = findViewById(R.id.passwordLogin);
 
-        final String correoTxt = correo.getText().toString().trim();
-        final String passwordTxt = password.getText().toString();
-
-        login = findViewById(R.id.loginBtn);
+        login = findViewById(R.id
+                .loginBtn);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String correoTxt = correo.getText().toString().trim();
+                String passwordTxt = password.getText().toString();
+                String passH = Hashing.sha256()
+                        .hashString(passwordTxt, StandardCharsets.UTF_8)
+                        .toString();
 
-                if (!correoTxt.isEmpty() && !passwordTxt.isEmpty()){
+                boolean isLogin = login(correoTxt, passwordTxt);
+                Toast.makeText(MainActivity.this, ""+ correoTxt + passwordTxt, Toast.LENGTH_SHORT).show();
+                if(isLogin){
                     Intent goHome = new Intent(MainActivity.this, HomeActivity.class);
                     startActivity(goHome);
-                    Toast.makeText(MainActivity.this, ""+passwordTxt, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Ha iniciado sesión correctamente.", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(MainActivity.this, "Ingrese datos por favor.", Toast.LENGTH_SHORT).show();
                 }
@@ -56,19 +68,9 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    protected boolean login(String correo, String password) {
+    private boolean login(String correo, String password) {
+       boolean result = true;
 
-        try {
-            this.connection.connect();
-            Connection con = this.connection.getConnection();
-            String sql = "";
-
-        } catch (Exception ex) {
-            return false;
-        } finally {
-            this.connection.disconnect();
-        }
-
-        return true;
+        return result;
     }
 }

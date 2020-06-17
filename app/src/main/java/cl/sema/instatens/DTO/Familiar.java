@@ -5,5 +5,5 @@ public class Familiar {
     private String paternoFam;
     private String maternoFam;
     private String sexoFam;
-
+    private Usuario usuario;
 }

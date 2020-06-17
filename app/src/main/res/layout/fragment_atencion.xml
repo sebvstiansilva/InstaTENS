@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="16dp"
+    tools:context=".atencionFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+            android:padding="8dp"
+            android:text="Nueva Atención"
+            android:textColor="@color/colorDark"
+            android:textSize="36dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+            android:paddingStart="24dp"
+            android:paddingTop="16dp"
+            android:text="¿Para quién es la atención?"
+            android:textColor="@color/colorGray"
+            android:textSize="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_white"
+                android:drawableStart="@drawable/ic_user_solid"
+                android:drawablePadding="16dp"
+                android:drawableTint="@color/colorPrimary"
+                android:hint="{{user}}"
+                android:padding="15dp"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/agregarFamiliarBtn"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/button_white"
+                android:backgroundTint="@color/colorPrimary"
+                android:drawableStart="@drawable/ic_plus_solid"
+                android:paddingLeft="10dp"
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+            android:paddingStart="24dp"
+            android:paddingTop="8dp"
+            android:text="Dirección de la atención"
+            android:textColor="@color/colorGray"
+            android:textSize="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_white"
+                android:drawableStart="@drawable/ic_user_solid"
+                android:drawablePadding="16dp"
+                android:drawableTint="@color/colorPrimary"
+                android:entries="@array/region_array"
+                android:padding="15dp"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/agregarDireccionBtn"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/button_white"
+                android:backgroundTint="@color/colorPrimary"
+                android:drawableStart="@drawable/ic_plus_solid"
+                android:drawableTint="@color/colorWhite"
+                android:paddingLeft="10dp"
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+            android:paddingStart="24dp"
+            android:paddingTop="8dp"
+            android:text="Tipo de atención"
+            android:textColor="@color/colorGray"
+            android:textSize="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:background="@drawable/button_white"
+            android:drawableRight="@drawable/ic_arrow_right"
+            android:elevation="10dp"
+            android:hint="Tipo de atención"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="16dp"
+            android:textSize="16dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+            android:paddingStart="24dp"
+            android:paddingTop="8dp"
+            android:text="Número de contacto"
+            android:textColor="@color/colorGray"
+            android:textSize="16dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:background="@drawable/button_white"
+            android:drawableStart="@drawable/ic_user_solid"
+            android:drawablePadding="16dp"
+            android:drawableTint="@color/colorPrimary"
+            android:elevation="10dp"
+            android:hint="+569"
+            android:inputType="number"
+            android:maxLength="12"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="16dp"
+            android:singleLine="true"
+            android:text="+569"
+            android:textSize="16dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/gradient_primary"
+            android:fontFamily="@font/regular"
+            android:text="Aceptar"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="24dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

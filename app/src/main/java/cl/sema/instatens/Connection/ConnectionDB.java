@@ -1,12 +1,14 @@
 package cl.sema.instatens.Connection;
 
+import java.sql.Connection;
 import java.sql.DriverManager;
 
-public class Connection {
-    private final String server = "localhost:3306";
+
+public class ConnectionDB {
+    private final String server = "localhost";
     private final String user = "root";
     private final String password = "";
-    private final String database = "test";
+    private final String database = "instatens";
     private Connection connection;
 
     public Connection getConnection() {
@@ -17,8 +19,9 @@ public class Connection {
         boolean result;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-                String url = "jdbc:mysql://" + server + database;
-                this.connection = (Connection) DriverManager.getConnection(url, user, password);
+            String url = "jdbc:mysql://" + server + ":3306/" + database;
+            this.connection = DriverManager
+                    .getConnection(url, user, password);
             result = true;
         } catch (Exception ex) {
             result = false;
@@ -28,7 +31,7 @@ public class Connection {
 
     public void disconnect() {
         try {
-            this.connection.clone();
+            this.connection.close();
         } catch (Exception ex) {
 
         }
