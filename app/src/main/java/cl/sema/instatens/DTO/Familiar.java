@@ -15,13 +15,9 @@ public class Familiar {
     public Familiar() {
     }
 
-<<<<<<< HEAD
-    public Familiar(int idFamiliar, String nombreFam, String paternoFam, String maternoFam, String sexoFam, int idUsuario) {
-=======
     /* Constructor de la clase Familiar que es llamada automaticamente
        cuando se crea el objeto de esta clase*/
     public Familiar(int idFamiliar, String nombreFam, String paternoFam, String maternoFam, String sexoFam, int idUsuario) {
->>>>>>> 37a4264a797893c2b0ef37667b443396620a226e
         this.idFamiliar = idFamiliar;
         this.nombreFam = nombreFam;
         this.paternoFam = paternoFam;
