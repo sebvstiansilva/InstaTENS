@@ -1,5 +1,7 @@
 package cl.sema.instatens.DTO;
 
+/* Clase Dirección, contiene los datos de las direcciones que puede almacenar
+*  cada usuario para cada atención que este requiera*/
 public class Direccion {
     private int idDireccion;
     private String region;
@@ -9,10 +11,13 @@ public class Direccion {
     private int piso;
     private Usuario idUsuario;
 
+    /* Constructor simple de la clase Dirección*/
     public Direccion() {
 
     }
 
+    /* Constructor de la clase Direccion que es llamada automaticamente
+       cuando se crea el objeto de esta clase*/
     public Direccion(int idDireccion, String region, String comuna, String calle, int numero, int piso, Usuario idUsuario) {
         this.idDireccion = idDireccion;
         this.region = region;
@@ -23,6 +28,7 @@ public class Direccion {
         this.idUsuario = idUsuario;
     }
 
+    /* Funciones GET'S and SET'S de todos los atributos de la clase Direccion */
     public int getIdDireccion() {
         return idDireccion;
     }

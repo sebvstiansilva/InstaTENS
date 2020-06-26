@@ -3,7 +3,7 @@ package cl.sema.instatens.Connection;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-
+    /* Clase ConnectionDB para realizar la conexión a la base de datos*/
 public class ConnectionDB {
     private final String server = "192.168.0.15";
     private final String user = "root";
@@ -11,10 +11,12 @@ public class ConnectionDB {
     private final String database = "instatens";
     private Connection connection;
 
+    /*Metodo que retorna la conexion a la base de datos*/
     public Connection getConnection() {
         return connection;
     }
 
+    /* Método que retorna el estado de la conexión a la base de datos */
     public boolean connect() {
         boolean result;
         try {
@@ -29,6 +31,7 @@ public class ConnectionDB {
         return result;
     }
 
+    /*Metodo que desconecta la base de datos*/
     public void disconnect() {
         try {
             this.connection.close();
