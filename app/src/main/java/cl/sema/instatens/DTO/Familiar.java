@@ -6,12 +6,12 @@ public class Familiar {
     private String paternoFam;
     private String maternoFam;
     private String sexoFam;
-    private Usuario idUsuario;
+    private int idUsuario;
 
     public Familiar() {
     }
 
-    public Familiar(int idFamiliar, String nombreFam, String paternoFam, String maternoFam, String sexoFam, Usuario idUsuario) {
+    public Familiar(int idFamiliar, String nombreFam, String paternoFam, String maternoFam, String sexoFam, int idUsuario) {
         this.idFamiliar = idFamiliar;
         this.nombreFam = nombreFam;
         this.paternoFam = paternoFam;
@@ -60,11 +60,11 @@ public class Familiar {
         this.sexoFam = sexoFam;
     }
 
-    public Usuario getIdUsuario() {
+    public int getIdUsuario() {
         return idUsuario;
     }
 
-    public void setIdUsuario(Usuario idUsuario) {
+    public void setIdUsuario(int idUsuario) {
         this.idUsuario = idUsuario;
     }
 }

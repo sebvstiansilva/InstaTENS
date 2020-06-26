@@ -92,28 +92,51 @@
             android:layout_height="wrap_content"
             android:paddingStart="24dp"
             android:paddingTop="8dp"
-            android:text="Número de contacto"
+            android:text="TENS"
             android:textColor="@color/colorGray"
             android:textSize="16dp" />
 
-        <EditText
+        <Spinner
+            android:id="@+id/tensAtencionSp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="24dp"
             android:background="@drawable/button_white"
             android:drawableStart="@drawable/ic_user_solid"
             android:drawablePadding="16dp"
+            android:layout_marginHorizontal="24dp"
             android:drawableTint="@color/colorPrimary"
-            android:elevation="5dp"
-            android:hint="9 digitos"
-            android:inputType="number"
-            android:maxLength="12"
-            android:paddingHorizontal="16dp"
-            android:paddingVertical="16dp"
+            android:padding="15dp"
             android:singleLine="true"
-            android:textSize="16sp" />
+            android:elevation="5dp"/>
+
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:paddingStart="24dp"-->
+<!--            android:paddingTop="8dp"-->
+<!--            android:text="Número de contacto"-->
+<!--            android:textColor="@color/colorGray"-->
+<!--            android:textSize="16dp" />-->
+
+<!--        <EditText-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginHorizontal="24dp"-->
+<!--            android:background="@drawable/button_white"-->
+<!--            android:drawableStart="@drawable/ic_user_solid"-->
+<!--            android:drawablePadding="16dp"-->
+<!--            android:drawableTint="@color/colorPrimary"-->
+<!--            android:elevation="5dp"-->
+<!--            android:hint="9 digitos"-->
+<!--            android:inputType="number"-->
+<!--            android:maxLength="12"-->
+<!--            android:paddingHorizontal="16dp"-->
+<!--            android:paddingVertical="16dp"-->
+<!--            android:singleLine="true"-->
+<!--            android:textSize="16sp" />-->
 
         <Button
+            android:id="@+id/solicitarTensBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"

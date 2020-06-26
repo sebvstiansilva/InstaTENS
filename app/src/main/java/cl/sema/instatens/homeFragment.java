@@ -40,8 +40,9 @@ public class homeFragment extends Fragment {
     // Widgets
     Button addNewFamiliarBtn, closeFamiliarBtn, aceptarFamiliarBtn,
             addNewDireccionBtn, closeDireccionBtn, aceptarDireccionBtn;
-    EditText nombreEt, apellidoPaternoEt, apellidoMaternoEt, fechaNacimientoEt;
-    Spinner sexoEt;
+    EditText nombreEt, apellidoPaternoEt, apellidoMaternoEt, fechaNacimientoEt,
+            calleEt, numeroEt, pisoEt;
+    Spinner sexoSp, regionSp, comunaSp;
     DatePickerDialog datePicker;
     TextView title;
 
@@ -57,8 +58,7 @@ public class homeFragment extends Fragment {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_home, container, false);
         String correo = getFromSharedPreferences("correo");
-        title = view.findViewById(R.id.title_home);
-        title.setText("Hola, " + correo);
+        Toast.makeText(getContext(), "Hola " + correo, Toast.LENGTH_SHORT).show();
         addNewFamiliarBtn = view
                 .findViewById(R.id.addNewFamiliarBtn);
         addNewFamiliarBtn.setOnClickListener(new View.OnClickListener() {
@@ -89,7 +89,24 @@ public class homeFragment extends Fragment {
         dialog = new Dialog(getContext());
         dialog.setContentView(R
                 .layout.layout_nueva_direccion);
+        aceptarDireccionBtn = dialog.findViewById(R.id.aceptarDireccionBtn);
+        regionSp = dialog.findViewById(R.id.regionSp);
+        comunaSp = dialog.findViewById(R.id.comunaSp);
+        calleEt = dialog.findViewById(R.id.calleEt);
+        numeroEt = dialog.findViewById(R.id.numeroEt);
+        pisoEt = dialog.findViewById(R.id.pisoEt);
 
+        aceptarDireccionBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (!regionSp.getSelectedItem().toString().isEmpty()) {
+                    agregarNuevaDireccion("http://192.168.0.15/instatens/direccion/nuevaDireccion.php");
+                    dialog.dismiss();
+                } else {
+                    Toast.makeText(getContext(), "No se permiten campos vacios", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
         closeDireccionBtn = dialog
                 .findViewById(R.id.closeDireccionBtn);
         closeDireccionBtn.setOnClickListener(new View.OnClickListener() {
@@ -101,6 +118,44 @@ public class homeFragment extends Fragment {
         dialog.show();
     }
 
+    private void agregarNuevaDireccion(String URL) {
+        final String region = regionSp.getSelectedItem().toString();
+        final String comuna = comunaSp.getSelectedItem().toString();
+        final String calle = calleEt.getText().toString().trim();
+        final String numero = numeroEt.getText().toString().trim();
+        final String piso = numeroEt.getText().toString().trim();
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                if (!response.isEmpty()){
+                    Toast.makeText(getContext(), "Se ha agregado un nueva dirección.", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getContext(), "Verifique los campos y vuelva a intentar", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getContext(), error.toString(), Toast.LENGTH_SHORT).show();
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> params = new HashMap<>();
+                params.put("region", region);
+                params.put("comuna", comuna);
+                params.put("calle", calle);
+                params.put("numero", numero);
+                params.put("piso", piso);
+                params.put("idUsuario", "4");
+                return params;
+            }
+        };
+        RequestQueue requestQueue = Volley.newRequestQueue(getContext());
+        requestQueue.add(stringRequest);
+    }
+
     public void showDialogNewFamiliar() {
         dialog = new Dialog(getContext());
         dialog.setContentView(R.layout
@@ -109,7 +164,7 @@ public class homeFragment extends Fragment {
         nombreEt = dialog.findViewById(R.id.nombreF);
         apellidoPaternoEt = dialog.findViewById(R.id.apellidoPaternoF);
         apellidoMaternoEt = dialog.findViewById(R.id.apellidoMaternoF);
-        sexoEt = dialog.findViewById(R.id.sexoF);
+        sexoSp = dialog.findViewById(R.id.sexoF);
         fechaNacimientoEt = dialog.findViewById(R.id.fechaNacimientoF);
         aceptarFamiliarBtn = dialog.findViewById(R.id.agregarFamiliarBtn);
 
@@ -139,7 +194,7 @@ public class homeFragment extends Fragment {
         final String nombre = nombreEt.getText().toString().trim();
         final String apellidoPaterno = apellidoPaternoEt.getText().toString().trim();
         final String apellidoMaterno = apellidoMaternoEt.getText().toString().trim();
-        final String sexo = sexoEt.getSelectedItem().toString();
+        final String sexo = sexoSp.getSelectedItem().toString();
         final String fechaNacimiento = fechaNacimientoEt.getText().toString().trim();
 
         StringRequest stringRequest = new StringRequest(StringRequest.Method.POST, URL, new Response.Listener<String>() {
