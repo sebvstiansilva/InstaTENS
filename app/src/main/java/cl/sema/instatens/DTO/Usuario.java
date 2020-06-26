@@ -3,6 +3,8 @@ package cl.sema.instatens.DTO;
 import java.util.Date;
 import java.util.List;
 
+/* Clase Usuario, contiene los atributos principales de los usuarios que se van a registrar en
+*  la aplicación, también contiene una lista de direcciones  y una lista de familiares*/
 public class Usuario {
     private int idUsuario;
     private String nombre;
@@ -16,18 +18,23 @@ public class Usuario {
     private List<Direccion> direcciones;
     private List<Familiar> familiares;
 
+    /* Constructor simple de la clase Usuario*/
     public Usuario() {
 
     }
 
+    /* Metodo que agrega una direccion a la lista de direcciones que pertenece a la clase Usuario */
     public void AgregarDireccion(List<Direccion> direcciones) {
         this.direcciones = direcciones;
     }
 
+    /* Metodo que agrega un familiar a la lista de familiares que pertenece a la clase Usuario */
     public void AgregarFamiliar(List<Familiar> familiares) {
         this.familiares = familiares;
     }
 
+    /* Constructor de la clase Usuario que es llamada automaticamente
+       cuando se crea el objeto de esta clase*/
     public Usuario(int idUsuario, String nombre, String apellidoPaterno, String appellidoMaterno, String password, String sexo, Date fechaNacimiento, String telefono, String mail) {
         this.idUsuario = idUsuario;
         this.nombre = nombre;
@@ -40,6 +47,7 @@ public class Usuario {
         this.mail = mail;
     }
 
+    /* Funciones GET'S AND SET'S de todos los atributos de la clase Usuario */
     public int getIdUsuario() {
         return idUsuario;
     }
