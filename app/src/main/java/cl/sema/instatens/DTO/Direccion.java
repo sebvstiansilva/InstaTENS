@@ -1,24 +1,34 @@
 package cl.sema.instatens.DTO;
 
 public class Direccion {
+    private int idDireccion;
     private String region;
     private String comuna;
     private String calle;
     private int numero;
-    private String departamento;
-    private int idUsuario;
+    private int piso;
+    private Usuario idUsuario;
 
     public Direccion() {
 
     }
 
-    public Direccion(String region, String comuna, String calle, int numero, String departamento, int idUsuario) {
+    public Direccion(int idDireccion, String region, String comuna, String calle, int numero, int piso, Usuario idUsuario) {
+        this.idDireccion = idDireccion;
         this.region = region;
         this.comuna = comuna;
         this.calle = calle;
         this.numero = numero;
-        this.departamento = departamento;
+        this.piso = piso;
         this.idUsuario = idUsuario;
+    }
+
+    public int getIdDireccion() {
+        return idDireccion;
+    }
+
+    public void setIdDireccion(int idDireccion) {
+        this.idDireccion = idDireccion;
     }
 
     public String getRegion() {
@@ -53,19 +63,19 @@ public class Direccion {
         this.numero = numero;
     }
 
-    public String getDepartamento() {
-        return departamento;
+    public int getPiso() {
+        return piso;
     }
 
-    public void setDepartamento(String departamento) {
-        this.departamento = departamento;
+    public void setPiso(int piso) {
+        this.piso = piso;
     }
 
-    public int getIdUsuario() {
+    public Usuario getIdUsuario() {
         return idUsuario;
     }
 
-    public void setIdUsuario(int idUsuario) {
+    public void setIdUsuario(Usuario idUsuario) {
         this.idUsuario = idUsuario;
     }
 }

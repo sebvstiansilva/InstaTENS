@@ -10,122 +10,120 @@
         android:background="@drawable/button_white"
         android:padding="24dp">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="24dp"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/regular"
-                android:text="Agregar dirección"
-                android:textColor="@color/colorDark"
-                android:textSize="36dp" />
+                android:layout_margin="24dp"
+                android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/light"
-                android:paddingVertical="8dp"
-                android:text="Región"
-                android:textColor="@color/colorGray" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_layout_direccion"
+                    android:textColor="@color/colorDark"
+                    android:textSize="36sp" />
 
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/spinner"
-                android:elevation="10dp"
-                android:entries="@array/region_array"
-                android:paddingStart="24dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="8dp"
+                    android:text="@string/region"
+                    android:textColor="@color/colorGray" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/light"
-                android:paddingVertical="8dp"
-                android:text="Comuna"
-                android:textColor="@color/colorGray" />
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner"
+                    android:elevation="5dp"
+                    android:entries="@array/region_array" />
 
-            <Spinner
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/spinner"
-                android:elevation="10dp"
-                android:entries="@array/comuna_array"
-                android:paddingStart="24dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="8dp"
+                    android:text="@string/comuna"
+                    android:textColor="@color/colorGray" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/light"
-                android:paddingVertical="8dp"
-                android:text="Calle"
-                android:textColor="@color/colorGray" />
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/spinner"
+                    android:elevation="5dp"
+                    android:entries="@array/comuna_array" />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/fieldtext_white"
-                android:elevation="10dp"
-                android:hint="Av. Marina"
-                android:paddingStart="24dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="8dp"
+                    android:text="@string/calle"
+                    android:textColor="@color/colorGray" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/light"
-                android:paddingVertical="8dp"
-                android:text="Número"
-                android:textColor="@color/colorGray" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:background="@drawable/fieldtext_white"
+                    android:elevation="5dp"
+                    android:hint="Av. Marina"
+                    android:inputType="text"
+                    android:paddingHorizontal="24dp" />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/fieldtext_white"
-                android:elevation="10dp"
-                android:hint="1024"
-                android:paddingStart="24dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="8dp"
+                    android:text="@string/numero"
+                    android:textColor="@color/colorGray" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/light"
-                android:paddingVertical="8dp"
-                android:text="Departamento / Oficina / Piso"
-                android:textColor="@color/colorGray" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/fieldtext_white"
+                    android:elevation="5dp"
+                    android:hint="1024"
+                    android:paddingHorizontal="24dp" />
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/fieldtext_white"
-                android:elevation="10dp"
-                android:hint="Oficina 8"
-                android:paddingStart="24dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="8dp"
+                    android:text="@string/depto_piso"
+                    android:textColor="@color/colorGray" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:textColor="@color/colorWhite"
-                android:background="@drawable/gradient_primary"
-                android:text="Aceptar"
-                android:textAllCaps="false"
-                android:fontFamily="@font/regular"
-                android:textSize="24dp" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/fieldtext_white"
+                    android:elevation="5dp"
+                    android:paddingHorizontal="24dp" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/gradient_dark"
-                android:fontFamily="@font/regular"
-                android:text="Cancelar"
-                android:textAllCaps="false"
-                android:textColor="@color/colorWhite"
-                android:textSize="24dp" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/gradient_primary"
+                    android:text="@string/aceptar"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="24sp" />
 
-        </LinearLayout>
+                <Button
+                    android:id="@+id/closeDireccionBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/gradient_dark"
+                    android:text="@string/cancelar"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+        </ScrollView>
+
     </androidx.cardview.widget.CardView>
 </RelativeLayout>

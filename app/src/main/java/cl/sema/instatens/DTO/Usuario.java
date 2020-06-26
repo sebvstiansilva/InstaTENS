@@ -1,14 +1,18 @@
 package cl.sema.instatens.DTO;
 
+import java.util.Date;
 import java.util.List;
 
 public class Usuario {
+    private int idUsuario;
     private String nombre;
     private String apellidoPaterno;
     private String appellidoMaterno;
     private String password;
+    private String sexo;
+    private Date fechaNacimiento;
+    private String telefono;
     private String mail;
-    private int telefono;
     private List<Direccion> direcciones;
     private List<Familiar> familiares;
 
@@ -16,29 +20,32 @@ public class Usuario {
 
     }
 
-    public Usuario(String nombre, String apellidoPaterno, String appellidoMaterno, String password, String mail, int telefono) {
+    public void AgregarDireccion(List<Direccion> direcciones) {
+        this.direcciones = direcciones;
+    }
+
+    public void AgregarFamiliar(List<Familiar> familiares) {
+        this.familiares = familiares;
+    }
+
+    public Usuario(int idUsuario, String nombre, String apellidoPaterno, String appellidoMaterno, String password, String sexo, Date fechaNacimiento, String telefono, String mail) {
+        this.idUsuario = idUsuario;
         this.nombre = nombre;
         this.apellidoPaterno = apellidoPaterno;
         this.appellidoMaterno = appellidoMaterno;
         this.password = password;
-        this.mail = mail;
+        this.sexo = sexo;
+        this.fechaNacimiento = fechaNacimiento;
         this.telefono = telefono;
+        this.mail = mail;
     }
 
-    public List<Direccion> getDirecciones() {
-        return direcciones;
+    public int getIdUsuario() {
+        return idUsuario;
     }
 
-    public void setDirecciones(List<Direccion> direcciones) {
-        this.direcciones = direcciones;
-    }
-
-    public List<Familiar> getFamiliares() {
-        return familiares;
-    }
-
-    public void setFamiliares(List<Familiar> familiares) {
-        this.familiares = familiares;
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
     public String getNombre() {
@@ -73,6 +80,30 @@ public class Usuario {
         this.password = password;
     }
 
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    public Date getFechaNacimiento() {
+        return fechaNacimiento;
+    }
+
+    public void setFechaNacimiento(Date fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
     public String getMail() {
         return mail;
     }
@@ -81,16 +112,28 @@ public class Usuario {
         this.mail = mail;
     }
 
-    public int getTelefono() {
-        return telefono;
+    public List<Direccion> getDirecciones() {
+        return direcciones;
     }
 
-    public void setTelefono(int telefono) {
-        this.telefono = telefono;
+    public void setDirecciones(List<Direccion> direcciones) {
+        this.direcciones = direcciones;
+    }
+
+    public List<Familiar> getFamiliares() {
+        return familiares;
+    }
+
+    public void setFamiliares(List<Familiar> familiares) {
+        this.familiares = familiares;
     }
 
     @Override
     public String toString() {
         return "Usuario " + this.nombre + " se ha registrado";
+    }
+
+    public String toJSON() {
+        return toString();
     }
 }

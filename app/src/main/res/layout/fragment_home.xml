@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginHorizontal="16dp"
+    android:layout_marginTop="16dp"
     tools:context=".homeFragment">
 
     <LinearLayout
@@ -13,9 +14,9 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/title_home"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/regular"
             android:padding="8dp"
             android:text="Inicio"
             android:textColor="@color/colorDark"
@@ -29,6 +30,7 @@
             android:src="@drawable/img_rectangle" />
 
         <Button
+            android:id="@+id/addNewFamiliarBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="8dp"
@@ -36,7 +38,6 @@
             android:drawableStart="@drawable/ic_user_plus_solid"
             android:drawablePadding="16dp"
             android:drawableTint="@color/colorDark"
-            android:fontFamily="@font/medium"
             android:paddingVertical="16dp"
             android:paddingLeft="16dp"
             android:text="Agregar Familiar"
@@ -46,6 +47,7 @@
             android:textSize="18dp" />
 
         <Button
+            android:id="@+id/addNewDireccionBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="8dp"
@@ -54,7 +56,6 @@
             android:drawableStart="@drawable/ic_user_plus_solid"
             android:drawablePadding="16dp"
             android:drawableTint="@color/colorDark"
-            android:fontFamily="@font/medium"
             android:paddingVertical="16dp"
             android:paddingLeft="16dp"
             android:text="Agregar Dirección"
@@ -71,7 +72,6 @@
             android:drawableStart="@drawable/ic_calendar_plus_regular"
             android:drawablePadding="16dp"
             android:drawableTint="@color/colorPrimary"
-            android:fontFamily="@font/medium"
             android:paddingVertical="16dp"
             android:paddingLeft="16dp"
             android:text="Nueva Atención"

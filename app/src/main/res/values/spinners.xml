@@ -4,6 +4,7 @@
         <item>Seleccione sexo...</item>
         <item>Hombre</item>
         <item>Mujer</item>
+        <item>Prefiero no especificar</item>
     </string-array>
 
     <string-array name="region_array">
@@ -15,5 +16,16 @@
         <item>Seleccione comuna...</item>
         <item>Valparaíso</item>
         <item>Viña del Mar</item>
+    </string-array>
+
+    <string-array name="tipo_array">
+        <item>Seleccione tipo de atención...</item>
+        <item>Inyección</item>
+        <item>Administración de Sueros</item>
+        <item>Curaciones</item>
+        <item>Manejo de Ostomías</item>
+        <item>Instalación de Sondas</item>
+        <item>Oxigenoterapia</item>
+        <item>Administración de Vacunas</item>
     </string-array>
 </resources>

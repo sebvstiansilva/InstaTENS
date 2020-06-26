@@ -22,7 +22,6 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/regular"
                     android:text="Agregar Familiar"
                     android:textColor="@color/colorDark"
                     android:textSize="36dp" />
@@ -30,16 +29,16 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/light"
                     android:paddingVertical="8dp"
                     android:text="Nombre Familiar"
                     android:textColor="@color/colorGray" />
 
                 <EditText
+                    android:id="@+id/nombreF"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/fieldtext_white"
-                    android:elevation="10dp"
+                    android:elevation="5dp"
                     android:hint="Juan"
                     android:singleLine="true"
                     android:paddingStart="24dp" />
@@ -47,16 +46,16 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/light"
                     android:paddingVertical="8dp"
                     android:text="Apellido Paterno"
                     android:textColor="@color/colorGray" />
 
                 <EditText
+                    android:id="@+id/apellidoPaternoF"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/fieldtext_white"
-                    android:elevation="10dp"
+                    android:elevation="5dp"
                     android:hint="Silva"
                     android:singleLine="true"
                     android:paddingStart="24dp" />
@@ -64,16 +63,16 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/light"
                     android:paddingVertical="8dp"
                     android:text="Apellido Materno"
                     android:textColor="@color/colorGray" />
 
                 <EditText
+                    android:id="@+id/apellidoMaternoF"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/fieldtext_white"
-                    android:elevation="10dp"
+                    android:elevation="5dp"
                     android:hint="Perez"
                     android:singleLine="true"
                     android:paddingStart="24dp" />
@@ -81,32 +80,32 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/light"
                     android:paddingVertical="8dp"
                     android:text="Sexo"
                     android:textColor="@color/colorGray" />
 
                 <Spinner
+                    android:id="@+id/sexoF"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/spinner"
-                    android:elevation="10dp"
+                    android:elevation="5dp"
                     android:entries="@array/sexo_array"
                     android:paddingStart="24dp" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/light"
                     android:paddingVertical="8dp"
                     android:text="Fecha de nacimiento"
                     android:textColor="@color/colorGray" />
 
                 <EditText
+                    android:id="@+id/fechaNacimientoF"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/fieldtext_white"
-                    android:elevation="10dp"
+                    android:elevation="5dp"
                     android:hint="Seleccionar fecha..."
                     android:paddingStart="24dp" />
 
@@ -116,19 +115,17 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
                     android:background="@drawable/gradient_primary"
-                    android:fontFamily="@font/regular"
                     android:text="Aceptar"
                     android:textAllCaps="false"
                     android:textColor="@color/colorWhite"
                     android:textSize="24dp" />
 
                 <Button
-                    android:id="@+id/cancelarFamiliarBtn"
+                    android:id="@+id/closeFamiliarBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/gradient_dark"
-                    android:fontFamily="@font/regular"
                     android:text="Cancelar"
                     android:textAllCaps="false"
                     android:textColor="@color/colorWhite"

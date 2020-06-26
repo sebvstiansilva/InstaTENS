@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 
 
 public class ConnectionDB {
-    private final String server = "localhost";
+    private final String server = "192.168.0.15";
     private final String user = "root";
     private final String password = "";
     private final String database = "instatens";

@@ -1,23 +1,17 @@
 package cl.sema.instatens;
 
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.view.MenuItem;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import android.app.Dialog;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomeActivity extends AppCompatActivity {
-    Dialog agregarFamiliar;
-    Button nuevaAtencionBtn, agregarFamiliarBtn;
-    Button cancelarBtn, cancelarFamiliarBtn;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,18 +50,5 @@ public class HomeActivity extends AppCompatActivity {
                 }
             };
 
-
-    private void showDialogAgregarFamiliar() {
-        agregarFamiliar.setContentView(R.layout.layout_nuevo_familiar);
-        cancelarFamiliarBtn = agregarFamiliar.findViewById(R.id.cancelarFamiliarBtn);
-        cancelarFamiliarBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                agregarFamiliar.dismiss();
-            }
-        });
-        agregarFamiliar.getWindow().setBackgroundDrawable(new ColorDrawable(Color.argb(150, 0, 0, 0)));
-        agregarFamiliar.show();
-    }
 
 }

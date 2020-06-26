@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">InstaTENS</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_layout_direccion">Agregar dirección</string>
+    <string name="region">Región</string>
+    <string name="comuna">Comuna</string>
+    <string name="calle">Calle</string>
+    <string name="numero">Número</string>
+    <string name="depto_piso">Departamento / Oficina / Piso</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="cancelar">Cancelar</string>
 </resources>
